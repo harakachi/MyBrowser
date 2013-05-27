@@ -18,6 +18,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://mixi.jp"]]];
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
 - (void)didReceiveMemoryWarning
