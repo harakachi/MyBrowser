@@ -10,5 +10,12 @@
 
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIButton *toolBtn;
+@property (weak, nonatomic) IBOutlet UIButton *bkBtn;
+@property (weak, nonatomic) IBOutlet UIButton *fwBtn;
+@property (weak, nonatomic) IBOutlet UIButton *stBtn;
+@property (weak, nonatomic) IBOutlet UIButton *reBtn;
+
+- (IBAction)btnToolBar:(id)sender;
 
 @end
